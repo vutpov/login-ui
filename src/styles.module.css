@@ -1,9 +1,73 @@
-/* add css module styles here (optional) */
-
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+body{
+  padding: 0;
+  margin: 0;
+  background: #fafafa;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginCard{
+  background: white;
+  padding: 80px 50px;
+  width: 300px;
+  box-shadow: -2px 2px 8px 10px #f7f7f7;
+}
+
+.loginCard .controlContainer, .loginCard .rememberContainer{
+  margin-bottom: 16px
+}
+
+.controlContainer *{
+  width: 100%;
+}
+
+.customInput{
+  border: 1px solid #d3cdcd;
+  padding: 12px 8px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.errorText{
+  color: red;
+  margin-top: 8px;
+}
+
+.btnSubmit{
+  font-size: 16px;
+  background: #007BFF;
+  border: none;
+  padding: 8px 0;
+  color: #ffffff;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.rememberContainer{
+  display: flex;
+  cursor: pointer;
+}
+
+.rememberlabel{
+  margin-left: 6px;
+}
+
+.logoContainer{
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 100%;
+  margin-bottom: 28px;
+  box-shadow: -2px 2px 8px 10px #f7f7f7;
+}
+
+
+
