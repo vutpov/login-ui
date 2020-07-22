@@ -1,4 +1,4 @@
-body{
+body {
   padding: 0;
   margin: 0;
 }
@@ -12,22 +12,29 @@ body{
   align-items: center;
 }
 
-.loginCard{
+.loginCard {
   background: white;
   padding: 80px 50px;
   width: 300px;
+  box-sizing: border-box;
   box-shadow: -2px 2px 8px 10px #f7f7f7;
 }
 
-.loginCard .controlContainer, .loginCard .rememberContainer{
-  margin-bottom: 16px
+.loginCard .controlContainer,
+.loginCard .rememberContainer {
+  margin-bottom: 16px;
 }
 
-.controlContainer *{
+.loginCard .rememberContainer {
+  display: flex;
+  align-items: center;
+}
+
+.controlContainer * {
   width: 100%;
 }
 
-.customInput{
+.customInput {
   border: 1px solid #d3cdcd;
   padding: 12px 8px;
   border-radius: 3px;
@@ -35,14 +42,14 @@ body{
   font-family: sans-serif;
 }
 
-.errorText{
+.errorText {
   color: red;
   margin-top: 8px;
 }
 
-.btnSubmit{
+.btnSubmit {
   font-size: 16px;
-  background: #007BFF;
+  background: #007bff;
   border: none;
   padding: 8px 0;
   color: #ffffff;
@@ -51,16 +58,16 @@ body{
   cursor: pointer;
 }
 
-.rememberContainer{
+.rememberContainer {
   display: flex;
   cursor: pointer;
 }
 
-.rememberlabel{
+.rememberlabel {
   margin-left: 6px;
 }
 
-.logoContainer{
+.logoContainer {
   width: 100px;
   height: 100px;
   background: white;
@@ -72,11 +79,7 @@ body{
   align-items: center;
 }
 
-.logo{
+.logo {
   width: 64px;
   height: 64px;
-
 }
-
-
-

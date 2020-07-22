@@ -65,7 +65,11 @@ const LoginUi: React.FC<LoginUiProps> = (props) => {
   )
 
   const onSubmit = useCallback(() => {
-    const setErrorMessage = (valueToCheck: string, errorMessage: string, setErrorFunction: Function) => {
+    const setErrorMessage = (
+      valueToCheck: string,
+      errorMessage: string,
+      setErrorFunction: Function
+    ) => {
       if (valueToCheck === '') {
         setErrorFunction(errorMessage)
       } else {
@@ -82,66 +86,66 @@ const LoginUi: React.FC<LoginUiProps> = (props) => {
   }, [values])
 
   return (
-    <div style={{background: '#fafafa'}}>
+    <div style={{ background: '#fafafa' }}>
       <div className={styles.container}>
-      {renderLogo()}
-      <div className={styles.loginCard} style={loginCardStyle}>
-        {renderHeaderComponents && renderHeaderComponents(setValues)}
-        <div className={styles.controlContainer}>
-          <input
-            name={'username'}
-            type={'text'}
-            onChange={(e) => {
-              handleChange({ name: e.target.name, value: e.target.value })
+        {renderLogo()}
+        <div className={styles.loginCard} style={loginCardStyle}>
+          {renderHeaderComponents && renderHeaderComponents(setValues)}
+          <div className={styles.controlContainer}>
+            <input
+              name={'username'}
+              type={'text'}
+              onChange={(e) => {
+                handleChange({ name: e.target.name, value: e.target.value })
+              }}
+              className={styles.customInput}
+              placeholder={'Username'}
+            />
+            <div className={styles.errorText}>{errorUsername}</div>
+          </div>
+
+          <div className={styles.controlContainer}>
+            <input
+              name={'password'}
+              type={'password'}
+              onChange={(e) => {
+                handleChange({ name: e.target.name, value: e.target.value })
+              }}
+              className={styles.customInput}
+              placeholder={'Password'}
+            />
+            <span className={styles.errorText}>{errorPassword}</span>
+          </div>
+
+          {renderFooterComponents && renderFooterComponents(setValues)}
+
+          <div className={styles.rememberContainer}>
+            <input
+              name={'remember'}
+              type={'checkbox'}
+              id={'remember'}
+              onChange={(e) => {
+                handleChange({ name: e.target.name, value: e.target.checked })
+              }}
+            />
+            <label htmlFor={'remember'} className={styles.rememberlabel}>
+              Remember me
+            </label>
+          </div>
+
+          <button
+            className={styles.btnSubmit}
+            style={btnSubmitStyle}
+            onClick={() => {
+              onSubmit()
             }}
-            className={styles.customInput}
-            placeholder={'Username'}
-          />
-          <div className={styles.errorText}>{errorUsername}</div>
+          >
+            Login
+          </button>
         </div>
 
-        <div className={styles.controlContainer}>
-          <input
-            name={'password'}
-            type={'password'}
-            onChange={(e) => {
-              handleChange({ name: e.target.name, value: e.target.value })
-            }}
-            className={styles.customInput}
-            placeholder={'Password'}
-          />
-          <span className={styles.errorText}>{errorPassword}</span>
-        </div>
-
-        {renderFooterComponents && renderFooterComponents(setValues)}
-
-        <div className={styles.rememberContainer}>
-          <input
-            name={'remember'}
-            type={'checkbox'}
-            id={'remember'}
-            onChange={(e) => {
-              handleChange({ name: e.target.name, value: e.target.checked })
-            }}
-          />
-          <label htmlFor={'remember'} className={styles.rememberlabel}>
-            Remember me
-          </label>
-        </div>
-
-        <button
-          className={styles.btnSubmit}
-          style={btnSubmitStyle}
-          onClick={() => {
-            onSubmit()
-          }}
-        >
-          Login
-        </button>
+        {footer}
       </div>
-
-      {footer}
-    </div>
     </div>
   )
 }
