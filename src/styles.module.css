@@ -1,7 +1,6 @@
 body{
   padding: 0;
   margin: 0;
-  background: #fafafa;
 }
 
 .container {
@@ -33,6 +32,7 @@ body{
   padding: 12px 8px;
   border-radius: 3px;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .errorText{
@@ -67,6 +67,15 @@ body{
   border-radius: 100%;
   margin-bottom: 28px;
   box-shadow: -2px 2px 8px 10px #f7f7f7;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width: 64px;
+  height: 64px;
+
 }
 
 
