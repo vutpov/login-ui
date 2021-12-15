@@ -119,7 +119,7 @@ const LoginUi: React.FC<LoginUiProps> = (props) => {
 
           {renderFooterComponents && renderFooterComponents(setValues)}
 
-          <div className={styles.rememberContainer}>
+          <div className={`${styles.rememberContainer} remember-container`}>
             <input
               name={'remember'}
               type={'checkbox'}
